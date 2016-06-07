@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="es" xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:fn="http://java.sun.com/jsp/jstl/functions"
+	xmlns:p="http://primefaces.org/ui">
+
+<h:head>
+	<meta charset="utf-8" />
+	<title>Calcula tu Matricula</title>
+	<h:outputStylesheet library="css" name="bootstrap.min.css" />
+	<h:outputStylesheet library="css" name="template-base.css" />
+	<link href="#{request.contextPath}/resources/css/font-awesome.min.css"
+		rel="stylesheet" />
+	<f:facet name="first">
+		<meta content="text/html; charset=UTF-8" http-equiv="Content-Type" />
+	</f:facet>
+</h:head>
+
+<h:body>
+	<div class="container-fluid">
+		<div class="row">
+			<div class="col-md-4 col-md-offset-4">
+				<ui:insert name="contenido"></ui:insert>
+			</div>
+		</div>
+
+	</div>
+
+	<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+	<h:outputScript library="primefaces" name="jquery/jquery.js" />
+	<!-- Include all compiled plugins (below), or include individual files as needed -->
+	<h:outputScript name="js/bootstrap.min.js" />
+	<h:outputScript name="js/template-base.js" />
+
+</h:body>
+</html>

@@ -1,0 +1,128 @@
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:p="http://primefaces.org/ui">
+
+<h:body>
+
+	<ui:composition template="/templates/plantillaBase.xhtml">
+		<ui:define name="contenido">
+			<h:form styleClass="form-horizontal">
+				<h3>Información del Estudiante</h3>
+				<div class="form-group">
+					<h:outputLabel for="estrato" value="Estrato" styleClass="col-sm-7" />
+					<div class="col-sm-5">
+						<p:inputText id="estrato" value="#{homeBean.estudiante.residenciaEstudiante.estrato}" styleClass="form-control" />
+					</div>
+				</div>
+				<div class="form-group">
+					<h:outputLabel for="noHabCiudad" value="De la ciudad donde proviene, ¿hay mas de 100.000 habitantes?" styleClass="col-sm-7" />
+					<div class="col-sm-5">
+						<p:selectBooleanButton id="noHabCiudad" value="#{homeBean.masDeCienMilHab}"
+                            onLabel="Si" offLabel="No" onIcon="fa fa-circle fa-1" offIcon="fa fa-circle-o fa-1"
+                        />
+					</div>
+				</div>
+				<div class="form-group">
+					<h:outputLabel for="isRural" value="De la zona donde proviene, ¿es área rural?" styleClass="col-sm-7" />
+					<div class="col-sm-5">
+						<p:selectBooleanButton id="isRural" value="#{homeBean.estudiante.residenciaEstudiante.isAreaRural}"
+                            onLabel="Si" offLabel="No" onIcon="fa fa-tree fa-1" offIcon="fa fa-university fa-1"
+                        />
+					</div>
+				</div>
+				<div class="form-group">
+					<h:outputLabel for="anoGraduacionSecundaria" value="¿Año de graduación de Secundaria?" styleClass="col-sm-7" />
+					<div class="col-sm-5">
+						<p:inputText id="anoGraduacionSecundaria" value="#{homeBean.anoGraduacionSecundaria}" styleClass="form-control" />
+					</div>
+				</div>
+				<div class="form-group">
+					<h:outputLabel for="valorPension" value="¿Cuanto pagó de pension en su último año de secundaria?" styleClass="col-sm-7" />
+					<div class="col-sm-5">
+						<p:inputText id="valorPension" value="#{homeBean.valorPension}" styleClass="form-control" />
+					</div>
+				</div>
+				<div class="form-group">
+					<h:outputLabel for="ingresos" value="¿Cuantos son sus ingresos mensuales?" styleClass="col-sm-7" />
+					<div class="col-sm-5">
+						<p:inputText id="ingresos" value="#{homeBean.ingresos}" styleClass="form-control" />
+					</div>
+				</div>
+				<div class="form-group">
+					<h:outputLabel for="viveSolo" value="¿Vive Solo?" styleClass="col-sm-7" />
+					<div class="col-sm-5">
+						<p:selectBooleanButton id="viveSolo" value="#{homeBean.estudiante.viveSolo}"
+                            onLabel="Si" offLabel="No" onIcon="fa fa-user fa-1" offIcon="fa fa-users fa-1"
+                        />
+					</div>
+				</div>
+				<div class="form-group">
+					<h:outputLabel for="esCasado" value="¿Es Casado?" styleClass="col-sm-7" />
+					<div class="col-sm-5">
+						<p:selectBooleanButton id="esCasado" value="#{homeBean.casado}"
+                            onLabel="Si" offLabel="No" onIcon="fa fa-venus-double fa-1" offIcon="fa fa-neuter fa-1"
+                        />
+					</div>
+				</div>
+				<div class="form-group">
+					<h:outputLabel for="trabaja" value="¿Trabaja?" styleClass="col-sm-7" />
+					<div class="col-sm-5">
+						<p:selectBooleanButton id="trabaja" value="#{homeBean.estudiante.isTrabaja}"
+                            onLabel="Si" offLabel="No" onIcon="fa fa-star fa-1" offIcon="fa fa-star-o fa-1"
+                        />
+					</div>
+				</div>
+				<div class="form-group">
+					<h:outputLabel for="padresFueraPerimetro" value="¿Sus padres viven en la ciudad	?" styleClass="col-sm-7" />
+					<div class="col-sm-5">
+						<p:selectBooleanButton id="padresFueraPerimetro" value="#{homeBean.estudiante.isPadresFueraPerim}"
+                            onLabel="Si" offLabel="No" onIcon="fa fa-circle fa-1" offIcon="fa fa-circle-o fa-1"
+                        />
+					</div>
+				</div>
+				<h3>Responsable del sostenimiento del estudiante</h3>
+				<div class="form-group">
+					<h:outputLabel for="existeEstrResp" value="En donde vive ¿hay estratificación?" styleClass="col-sm-7" />
+					<div class="col-sm-5">
+						<p:selectBooleanButton id="existeEstrResp" value="#{homeBean.estudiante.residenciaRespManutencion.hasServiciosEstratificados}"
+                            onLabel="Si" offLabel="No" onIcon="fa fa-circle fa-1" offIcon="fa fa-circle-o fa-1"
+                        />
+					</div>
+				</div>
+				<div class="form-group">
+					<h:outputLabel for="estratoResp" value="Estrato" styleClass="col-sm-7" />
+					<div class="col-sm-5">
+						<p:inputText id="estratoResp" value="#{homeBean.estudiante.residenciaRespManutencion.estrato}" styleClass="form-control" />
+					</div>
+				</div>
+				<div class="form-group">
+					<h:outputLabel for="masDeCienMilHabResp" value="De la ciudad donde proviene, ¿hay mas de 100.000 habitantes?" styleClass="col-sm-7" />
+					<div class="col-sm-5">
+						<p:selectBooleanButton id="masDeCienMilHabResp" value="#{homeBean.masDeCienMilHabResp}"
+                            onLabel="Si" offLabel="No" onIcon="fa fa-circle fa-1" offIcon="fa fa-circle-o fa-1"
+                        />
+					</div>
+				</div>
+				<div class="form-group">
+					<h:outputLabel for="isRuralResp" value="De la zona donde proviene, ¿es área rural?" styleClass="col-sm-7" />
+					<div class="col-sm-5">
+						<p:selectBooleanButton id="isRuralResp" value="#{homeBean.estudiante.residenciaRespManutencion.isAreaRural}"
+                            onLabel="Si" offLabel="No" onIcon="fa fa-tree fa-1" offIcon="fa fa-university fa-1"
+                        />
+					</div>
+				</div>
+				<div class="form-group">
+					<div class="col-sm-offset-3 col-sm-9 top17">
+						<p:commandButton action="#{homeBean.calcular}" value="Calcular" styleClass="ui-priority-primary pull-right"/>
+					</div>
+				</div>
+			</h:form>
+			<h4>
+				<h:outputText value="#{homeBean.estudiante.pbm.a1}" rendered="#{homeBean.estudiante.pbm.a1 != null}" />
+			</h4>
+		</ui:define>
+	</ui:composition>
+</h:body>
+</html>
