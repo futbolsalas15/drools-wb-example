@@ -10,8 +10,8 @@
 
 	<properties>
 		<drools.version>6.3.0.Final</drools.version>
-        <maven.compiler.source>1.7</maven.compiler.source>
-        <maven.compiler.target>1.7</maven.compiler.target>
+		<maven.compiler.source>1.7</maven.compiler.source>
+		<maven.compiler.target>1.7</maven.compiler.target>
 	</properties>
 
 	<repositories>
@@ -23,12 +23,12 @@
 		<repository>
 			<id>Drools</id>
 			<name>Business Rules Repository</name>
-			<url>file:///D:\Users\futbolsalas15\docker\data\drools\</url>
+			<url>file:///D:\Users\salazarjuan\DockerContainers\drools\</url>
 		</repository>
 	</repositories>
 
 	<dependencies>
-	
+
 		<!-- Drools Dependencies -->
 		<dependency>
 			<groupId>org.drools</groupId>
@@ -46,7 +46,7 @@
 			<artifactId>kie-ci</artifactId>
 			<version>${drools.version}</version>
 		</dependency>
-	
+
 		<dependency>
 			<groupId>javax.servlet</groupId>
 			<artifactId>javax.servlet-api</artifactId>
@@ -117,6 +117,13 @@
 			<version>4.12</version>
 		</dependency>
 
+		<dependency>
+			<groupId>mysql</groupId>
+			<artifactId>mysql-connector-java</artifactId>
+			<version>5.1.35</version>
+			<scope>provided</scope>
+		</dependency>
+
 		<!-- Repositorio de reglas de negocio -->
 		<dependency>
 			<artifactId>liquidacionProject</artifactId>
@@ -125,6 +132,6 @@
 		</dependency>
 
 	</dependencies>
-    
+
 
 </project>

@@ -14,6 +14,7 @@ import org.kie.api.cdi.KSession;
 import org.kie.api.runtime.KieContainer;
 import org.kie.api.runtime.KieSession;
 
+import edu.udistrital.espingsw.basedatos.datos.SalariosMinimos;
 import edu.udistrital.espingsw.liquidacionproject.Estudiante;
 import edu.udistrital.espingsw.liquidacionproject.LugarResidencia;
 import edu.udistrital.espingsw.liquidacionproject.PuntosBasicosMatricula;
@@ -59,6 +60,14 @@ public class HomeBean implements Serializable {
 		
 	}
 
+	private double getEquivalenciaSalMinPension(){
+		double equivalenciaSalMin = 0.0;
+		SalariosMinimos salMin = new SalariosMinimos();
+		long salarioMinimoAno = salMin.getSalarioMinimo(this.anoGraduacionSecundaria);
+		equivalenciaSalMin = Math.round(((double) this.valorPension/salarioMinimoAno ) * 100.0) / 100.0;
+		return equivalenciaSalMin;
+	}
+	
 	/* GETTERS - SETTERS */
 	public Estudiante getEstudiante() {
 		return estudiante;
