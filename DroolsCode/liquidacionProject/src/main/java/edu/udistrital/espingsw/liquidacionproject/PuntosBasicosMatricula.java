@@ -15,17 +15,17 @@ public class PuntosBasicosMatricula implements java.io.Serializable
 
    private java.lang.Integer a3;
 
-   private java.lang.Integer b1;
+   private Double b1;
 
-   private java.lang.Integer b2;
+   private Double b2;
 
-   private java.lang.Integer b3;
+   private Double b3;
 
-   private java.lang.Integer b4;
+   private Double b4;
 
    public PuntosBasicosMatricula()
    {
-	this.a1 = 100;
+      this.a1 = 100;
    }
 
    public java.lang.Integer getA1()
@@ -58,49 +58,49 @@ public class PuntosBasicosMatricula implements java.io.Serializable
       this.a3 = a3;
    }
 
-   public java.lang.Integer getB1()
+   public java.lang.Double getB1()
    {
       return this.b1;
    }
 
-   public void setB1(java.lang.Integer b1)
+   public void setB1(java.lang.Double b1)
    {
       this.b1 = b1;
    }
 
-   public java.lang.Integer getB2()
-   {
-      return this.b2;
-   }
-
-   public void setB2(java.lang.Integer b2)
-   {
-      this.b2 = b2;
-   }
-
-   public java.lang.Integer getB3()
+   public java.lang.Double getB3()
    {
       return this.b3;
    }
 
-   public void setB3(java.lang.Integer b3)
+   public void setB3(java.lang.Double b3)
    {
       this.b3 = b3;
    }
 
-   public java.lang.Integer getB4()
+   public java.lang.Double getB2()
+   {
+      return this.b2;
+   }
+
+   public void setB2(java.lang.Double b2)
+   {
+      this.b2 = b2;
+   }
+
+   public java.lang.Double getB4()
    {
       return this.b4;
    }
 
-   public void setB4(java.lang.Integer b4)
+   public void setB4(java.lang.Double b4)
    {
       this.b4 = b4;
    }
 
    public PuntosBasicosMatricula(java.lang.Integer a1, java.lang.Integer a2,
-         java.lang.Integer a3, java.lang.Integer b1, java.lang.Integer b2,
-         java.lang.Integer b3, java.lang.Integer b4)
+         java.lang.Integer a3, java.lang.Double b1, java.lang.Double b2,
+         java.lang.Double b3, java.lang.Double b4)
    {
       this.a1 = a1;
       this.a2 = a2;
