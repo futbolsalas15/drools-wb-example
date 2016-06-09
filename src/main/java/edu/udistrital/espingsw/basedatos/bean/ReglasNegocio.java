@@ -19,16 +19,10 @@ public class ReglasNegocio {
 	private KieSession kSession;
 	
 	public void validar(Estudiante estudiante){
-//		System.out.println("Tiene servicios estratificados:" +estudiante.getResidenciaEstudiante().getHasServiciosEstratificados());
-//		System.out.println("Estrato:" +estudiante.getResidenciaEstudiante().getEstrato());
-//		System.out.println("Es Area Rural:" +estudiante.getResidenciaEstudiante().getIsAreaRural());
-//		System.out.println("No Habitantes Ciudad:" +estudiante.getResidenciaEstudiante().getNoHabitantesCiudad());
-//		System.out.println("a1:" +estudiante.getPbm().getA1());
 		FactHandle factHandle = kSession.insert(estudiante);
 		int noReglas = kSession.fireAllRules();
 		kSession.delete(factHandle);
 		System.out.println("No reglas arrojadas: "+noReglas);
-//		System.out.println("a1:" +estudiante.getPbm().getA1());
 	}
 	
 }

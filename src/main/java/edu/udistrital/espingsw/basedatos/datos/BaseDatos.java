@@ -2,6 +2,7 @@ package edu.udistrital.espingsw.basedatos.datos;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
+import java.sql.SQLException;
 
 public class BaseDatos {
 
@@ -28,7 +29,24 @@ public class BaseDatos {
 	}
 
 	public Connection getConn() {
+		try {
+			if (conn.isClosed()) {
+				Class.forName("com.mysql.jdbc.Driver").newInstance();
+				conn = DriverManager.getConnection(
+						"jdbc:mysql://docker.dev/liquidacion", user, password);
+			}
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
 		return conn;
+	}
+
+	public void closeConn() {
+		try {
+			conn.close();
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
 	}
 
 }
